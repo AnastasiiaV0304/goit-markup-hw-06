@@ -139,6 +139,10 @@ img {
   display: none;
 }
 
+.mob-menu-window {
+  display: none;
+}
+
 /* Solutions */
 
 .main {
