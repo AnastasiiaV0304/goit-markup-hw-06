@@ -50,6 +50,7 @@ img {
 
 .header-container {
   display: flex;
+  padding: 24px;
 }
 
 .logo {
@@ -108,7 +109,6 @@ img {
   display: flex;
   gap: 40px;
   display: flex;
-  padding: 24px 0;
 }
 
 .adress {
@@ -245,8 +245,6 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
-  max-width: 264px;
-  display: flex;
 }
 
 .features-icon {
@@ -838,11 +836,9 @@ img {
 
   .mob-menu-window {
     display: block;
-
+    position: fixed;
     visibility: hidden;
     opacity: 0;
-
-    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -854,6 +850,8 @@ img {
     border-radius: 4px;
     padding: 72px 24px 40px 16px;
     z-index: 999;
+    display: flex;
+    flex-direction: column;
   }
 
   .close-mob-menu {
@@ -876,10 +874,11 @@ img {
     fill: #2e2f42;
   }
 
-  .mob-menu-navigation {
+  .mob-menu-address-soc {
     display: flex;
     flex-direction: column;
-    gap: 168px;
+    gap: 48px;
+    margin-top: auto;
   }
 
   .mob-menu-list {
@@ -914,7 +913,7 @@ img {
   .mob-menu-soc {
     display: flex;
     justify-content: space-between;
-    margin-top: 48px;
+    margin-top: auto;
   }
 
   .mob-menu-li:hover,
@@ -950,6 +949,20 @@ img {
       url(../images/hero-mob.jpg);
     padding: 72px 0px;
   }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-mob-2x.jpg);
+      padding: 72px 0px;
+    }
+  }
+
   .button {
     max-width: 169px;
     margin: 0 auto;
@@ -958,8 +971,14 @@ img {
 
   /* Section 2 Features */
 
+  .features-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
   .features-list {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
     gap: 72px;
   }
 
@@ -977,8 +996,11 @@ img {
   }
 
   .features-item {
-    width: auto;
-    margin: 0 auto;
+    width: 100%;
+  }
+
+  .features-description {
+    font-weight: 500;
   }
 
   /* Section 3 Team */
@@ -997,7 +1019,8 @@ img {
   }
 
   .team-set {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
     gap: 72px;
   }
 
@@ -1009,7 +1032,8 @@ img {
   /* Section 4 Portfolio */
 
   .portfolio-set {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
     gap: 48px;
   }
 
@@ -1115,7 +1139,33 @@ img {
     gap: 12px;
   }
 
+  .contacts {
+    font-size: 12px;
+  }
+
   /* Sollutions */
+
+  .main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-tab.jpg);
+    padding: 72px 0px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-tab-2x.jpg);
+      padding: 72px 0px;
+    }
+  }
 
   .main-header {
     text-align: center;
@@ -1127,8 +1177,8 @@ img {
   /* Features */
 
   .features-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 72px 24px;
   }
 
@@ -1143,11 +1193,9 @@ img {
   /* Team */
 
   .team-set {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 64px 24px;
-    padding-left: 108px;
-    padding-right: 108px;
   }
 
   .team-card {
@@ -1157,8 +1205,8 @@ img {
   /* PORTFOLIO */
 
   .portfolio-set {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 72px 24px;
   }
 
@@ -1201,24 +1249,17 @@ img {
   }
 }
 
-@media (min-resolution: 96dpi) {
-  .main {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url("../images/hero-background.jpg");
-  }
-}
-
-@media screen and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .main {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url("../images/people-office-2x.jpg");
+@media (min-width: 1158px) {
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-2x.jpg);
+      padding: 72px 0px;
+    }
   }
 }
