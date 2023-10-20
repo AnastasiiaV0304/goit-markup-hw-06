@@ -208,7 +208,12 @@
           <h2 class="heading">Our Team</h2>
           <ul class="team-set">
             <li class="team-card">
-              <img src="./images/1.jpg" alt="Mark Guerrero" width="264" />
+              <img
+                srcset="./images/1.jpg 1x, ./images/img-2x.jpg 2x"
+                src="./images/1.jpg"
+                alt="Mark Guerrero"
+                width="264"
+              />
               <div class="name-proff">
                 <h3 class="team-card-name">Mark Guerrero</h3>
                 <p class="team-card-p">Product Designer</p>
@@ -267,7 +272,12 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/2.jpg" alt="Tom Ford" width="264" />
+              <img
+                srcset="./images/2.jpg 1x, ./images/img-2-2x.jpg 2x"
+                src="./images/2.jpg"
+                alt="Tom Ford"
+                width="264"
+              />
               <div class="name-proff">
                 <h3 class="team-card-name">Tom Ford</h3>
                 <p class="team-card-p">Frontend Developer</p>
@@ -326,7 +336,12 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/3.jpg" alt="Camila Garcia" width="264" />
+              <img
+                srcset="./images/3.jpg 1x, ./images/img-3-2x.jpg 2x"
+                src="./images/3.jpg"
+                alt="Camila Garcia"
+                width="264"
+              />
               <div class="name-proff">
                 <h3 class="team-card-name">Camila Garcia</h3>
                 <p class="team-card-p">Marketing</p>
@@ -385,7 +400,12 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/4.jpg" alt="Daniel Wilson" width="264" />
+              <img
+                srcset="./images/4.jpg 1x, ./images/img-4-2x.jpg 2x"
+                src="./images/4.jpg"
+                alt="Daniel Wilson"
+                width="264"
+              />
               <div class="name-proff">
                 <h3 class="team-card-name">Daniel Wilson</h3>
                 <p class="team-card-p">UI Designer</p>
@@ -454,12 +474,22 @@
           <ul class="portfolio-set">
             <li class="portfolio-item">
               <div class="portfolio-cover-wrap">
-                <img
-                  src="./images/img-1.jpg"
-                  alt="Banking App"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio-mob-1.jpg    1x,
+                      ./images/portfolio-mob-1-2x.jpg 2x
+                    "
+                    media="(min-width:320)"
+                  />
+                  <img
+                    src="./images/img-1.jpg"
+                    alt="Banking App"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
+
                 <p class="portfolio-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -473,12 +503,21 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-cover-wrap">
-                <img
-                  src="./images/img-2.jpg"
-                  alt="QR code"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio-mob-2.jpg    1x,
+                      ./images/portfolio-mob-2-2x.jpg 2x
+                    "
+                    media="(min-width:320)"
+                  />
+                  <img
+                    src="./images/img-2.jpg"
+                    alt="QR code"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="portfolio-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -492,12 +531,21 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-cover-wrap">
-                <img
-                  src="./images/img-3.jpg"
-                  alt="Laptop and phone screen"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio-mob-3.jpg    1x,
+                      ./images/portfolio-mob-3-2x.jpg 2x
+                    "
+                    media="(min-width:320)"
+                  />
+                  <img
+                    src="./images/img-3.jpg"
+                    alt="Laptop and phone screen"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="portfolio-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -512,12 +560,21 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-cover-wrap">
-                <img
-                  src="./images/img-4.jpg"
-                  alt="Taxi driver"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio-mob-4.jpg    1x,
+                      ./images/portfolio-mob-4-2x.jpg 2x
+                    "
+                    media="(min-width:320)"
+                  />
+                  <img
+                    src="./images/img-4.jpg"
+                    alt="Taxi driver"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="portfolio-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -532,12 +589,21 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-cover-wrap">
-                <img
-                  src="./images/img-5.jpg"
-                  alt="Variants of screen illustrations"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio-mob-5.jpg    1x,
+                      ./images/portfolio-mob-5-2x.jpg 2x
+                    "
+                    media="(min-width:320)"
+                  />
+                  <img
+                    src="./images/img-5.jpg"
+                    alt="Variants of screen illustrations"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="portfolio-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -552,12 +618,21 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-cover-wrap">
-                <img
-                  src="./images/img-6.jpg"
-                  alt="Girl with phone"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio-mob-6.jpg    1x,
+                      ./images/portfolio-mob-6-2x.jpg 2x
+                    "
+                    media="(min-width:320)"
+                  />
+                  <img
+                    src="./images/img-6.jpg"
+                    alt="Girl with phone"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="portfolio-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
