@@ -130,16 +130,14 @@ img {
   color: var(--OCEAN, #404bbf);
 }
 
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+@media (min-width: 1158px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 .button-mob-menu {
-  display: none;
-}
-
-.mob-menu-window {
   display: none;
 }
 
@@ -468,10 +466,6 @@ img {
   letter-spacing: 0.32px;
   max-width: 264px;
   margin: 0;
-}
-
-.footer-logo-p {
-  margin-right: 120px;
 }
 
 .footer-soc-header {
@@ -837,11 +831,10 @@ img {
   .mob-menu-window {
     display: block;
     position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 250ms;
     width: 320px;
     height: 100%;
     background: #fcfcfc;
@@ -887,13 +880,16 @@ img {
     gap: 40px;
   }
 
-  .mob-menu-li {
-    color: var(--NAVY-BLUE, #2e2f42);
+  .mob-menu-link {
+    color: #2e2f42;
     font-size: 36px;
     font-weight: 700;
     line-height: 1.111;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+  }
+  .studio-li {
+    color: var(--OCEAN, #404bbf);
   }
 
   .mob-menu-address {
@@ -902,12 +898,16 @@ img {
     gap: 24px;
   }
 
-  .mob-address-li {
-    color: var(--SLATE, #434455);
+  .mob-menu-contacts {
+    color: #434455;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+  }
+
+  .phone-li {
+    color: #4d5ae5;
   }
 
   .mob-menu-soc {
@@ -924,6 +924,10 @@ img {
   .mob-address-li:hover,
   .mob-address-li:focus {
     color: #4d5ae5;
+  }
+
+  .mob-menu-window.is-open {
+    transform: translateX(0);
   }
 
   /* Sollutions */
@@ -1031,6 +1035,10 @@ img {
 
   /* Section 4 Portfolio */
 
+  .portfolio-section {
+    padding: 96px 0;
+  }
+
   .portfolio-set {
     display: flex;
     flex-wrap: wrap;
@@ -1110,6 +1118,12 @@ img {
   }
 }
 
+@media (min-width: 768px) {
+  .mob-menu-window {
+    display: none;
+  }
+}
+
 /* Tablet version */
 
 @media (min-width: 768px) and (max-width: 1157px) {
@@ -1123,7 +1137,7 @@ img {
   }
 
   .header {
-    padding: 0;
+    padding: 10px 0;
   }
 
   .header-set {
@@ -1204,6 +1218,10 @@ img {
 
   /* PORTFOLIO */
 
+  .portfolio-section {
+    padding: 96px 0;
+  }
+
   .portfolio-set {
     display: flex;
     flex-wrap: wrap;
@@ -1261,5 +1279,9 @@ img {
         url(../images/people-office-2x.jpg);
       padding: 72px 0px;
     }
+  }
+
+  .footer-logo-p {
+    margin-right: 120px;
   }
 }
